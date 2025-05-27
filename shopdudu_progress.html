@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>ShopDuDu 商品列表教學進度</title>
+    <style>
+        body { font-family: "Segoe UI", sans-serif; line-height: 1.8; padding: 2em; max-width: 900px; margin: auto; }
+        h1, h2 { color: #2c3e50; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 2em; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f5f5f5; }
+        code { background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>📘 ShopDuDu 商品列表 App 教學進度</h1>
+
+    <h2>🔹 開發環境建置</h2>
+    <table>
+        <tr><th>項目</th><th>說明</th></tr>
+        <tr><td>安裝 Android Studio</td><td>使用官方最新版，含 SDK / 模擬器安裝</td></tr>
+        <tr><td>建立 Kotlin App 專案</td><td>使用 Empty Activity，命名為 <code>ShopDuDu</code></td></tr>
+        <tr><td>模擬器管理</td><td>建立多台模擬器（Pixel 4a / Pixel 5 / Pixel Tablet）以測試不同尺寸畫面</td></tr>
+    </table>
+
+    <h2>🔹 Gradle 設定與版本管理</h2>
+    <table>
+        <tr><th>項目</th><th>說明</th></tr>
+        <tr><td>使用 Kotlin DSL（.kts）</td><td>Gradle 使用 Kotlin 語法格式</td></tr>
+        <tr><td>套件管理使用 Version Catalog</td><td>經由 <code>libs.versions.toml</code> 統一集中管理套件版本</td></tr>
+        <tr><td>設定 DataBinding</td><td>在 <code>buildFeatures</code> 中啟用 <code>dataBinding = true</code></td></tr>
+    </table>
+
+    <h2>🔹 加入的核心套件（Library）</h2>
+    <table>
+        <tr><th>套件</th><th>功能說明</th></tr>
+        <tr><td><code>retrofit</code></td><td>串接 RESTful API（網路請求）</td></tr>
+        <tr><td><code>converter.gson</code></td><td>將 JSON 資料自動轉為 Kotlin 資料類別</td></tr>
+        <tr><td><code>coroutines.android</code></td><td>使用協程處理非同步請求（不卡 UI）</td></tr>
+        <tr><td><code>lifecycle.viewmodel.ktx</code></td><td>資料邏輯與畫面分離的 ViewModel</td></tr>
+        <tr><td><code>lifecycle.livedata.ktx</code></td><td>觀察資料變化並更新畫面的 LiveData</td></tr>
+        <tr><td><code>recyclerview</code></td><td>建立滑動式商品列表（可重複顯示項目）</td></tr>
+    </table>
+
+    <h2>🔹 資料模型建立</h2>
+    <table>
+        <tr><th>類別名稱</th><th>用途</th><th>欄位</th></tr>
+        <tr>
+            <td><code>Product.kt</code></td>
+            <td>對應 API 回傳的商品資料</td>
+            <td><code>id</code>, <code>title</code>, <code>price</code>, <code>description</code>, <code>image</code></td>
+        </tr>
+    </table>
+
+    <h2>✅ 已完成階段</h2>
+    <ul>
+        <li>App 專案建立與模擬器準備</li>
+        <li>基礎套件與 Gradle 設定完成</li>
+        <li>商品資料模型 <code>Product.kt</code> 建立完成</li>
+    </ul>
+
+    <h2>🔜 下一步預告</h2>
+    <ul>
+        <li>建立 Retrofit API 介面與 Repository</li>
+        <li>使用 ViewModel 呼叫 API</li>
+        <li>建立 RecyclerView 顯示商品列表</li>
+    </ul>
+</body>
+</html>
